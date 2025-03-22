@@ -32,7 +32,23 @@ const NavBar = () => {
       </div>
 
       <div className="flex gap-4 items-center">
-        <Menu className="cursor-pointer md:hidden" />
+        <Menu
+          className="cursor-pointer md:hidden"
+          onClick={() => setDropdownMenu(!dropdownMenu)}
+        />
+        {dropdownMenu && (
+          <div className="absolute top-10 right-6 flex flex-col gap-8 p-5 bg-white shadow-xl rounded-lg">
+            {navLinks.map((link) => (
+              <Link
+                href={link.url}
+                key={link.label}
+                className="flex gap-4 text-body-medium"
+              >
+                {link.icon} <p>{link.label}</p>
+              </Link>
+            ))}
+          </div>
+        )}
         <UserButton />
       </div>
     </div>
