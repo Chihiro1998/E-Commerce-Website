@@ -71,29 +71,22 @@ const config: Config = {
           fontWeight: "500",
         },
       ],
-      "small-bold": [
-        "14px",
-        {
-          lineHeight: "140%",
-          fontWeight: "700",
-        },
-      ],
-      "small-medium": [
-        "14px",
-        {
-          lineHeight: "140%",
-          fontWeight: "500",
-        },
-      ],
     },
     extend: {
       colors: {
+        "white-1": "#F8F8F8",
+        "grey-1": "#616161",
+        "grey-2": "#E5E7EB",
+        "blue-1": "#005EBE",
+        "blue-2": "#E9F5FE",
+        "blue-3": "#F5F7F9",
+        "purple-1": "#3B317D",
+        "purple-2": "#706D9C",
+        "pink-1": "#e6c3c9",
         "red-1": "#FF0000",
-        "grey-1": "#F7F7F7",
-        "grey-2": "#8A8A8A",
       },
     },
   },
-  plugins: [require("tailwind-scrollbar-hide")],
+  plugins: [],
 };
 export default config;
