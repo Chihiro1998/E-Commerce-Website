@@ -1,4 +1,5 @@
 import LeftSideBar from "@/components/layout/LeftSideBar";
+import NavBar from "@/components/layout/NavBar";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -29,8 +30,10 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <NavBar />
           <div className="flex max-lg:flex-col text-purple-2">
             <LeftSideBar />
+
             <div className="purple-2">{children}</div>
           </div>
         </body>
